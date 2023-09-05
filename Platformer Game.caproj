@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Platformer Game</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.alienexplorer.n77game</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>27700</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>700</width>
+        <height>400</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="start_button" sid="335766862854512">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="577587822633661" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.510204" original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_ui-pack\PNG\blue_button00.png">
+                        <collision-poly>
+                            <point x="0.00526316" y="0.0204082" />
+                            <point x="0.5" y="0" />
+                            <point x="0.994737" y="0.0204082" />
+                            <point x="0.994737" y="0.979592" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00526316" y="0.979592" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="load_button" sid="899315888388290">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="892639946706230" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.510204" original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_ui-pack\PNG\blue_button00.png">
+                        <collision-poly>
+                            <point x="0.00526316" y="0.0204082" />
+                            <point x="0.5" y="0" />
+                            <point x="0.994737" y="0.0204082" />
+                            <point x="0.994737" y="0.979592" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00526316" y="0.979592" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="exit_button" sid="416941282458212">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="576809042903813" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.510204" original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_ui-pack\PNG\blue_button00.png">
+                        <collision-poly>
+                            <point x="0.00526316" y="0.0204082" />
+                            <point x="0.5" y="0" />
+                            <point x="0.994737" y="0.0204082" />
+                            <point x="0.994737" y="0.979592" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00526316" y="0.979592" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="487424559775833">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="TileBgStartMenu" sid="559281912874667">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\skymini.jpg" />
+        </object-type>
+        <object-type name="TileBgGameplay" sid="995769028744245">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\sky-large.png" />
+        </object-type>
+        <object-type name="TileGroundGrassMain" sid="255012745555401">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_platformer-pack-redux\PNG\Ground\Grass\grassMid.png" />
+        </object-type>
+        <object-type name="TileGroundGrassMain2" sid="186181705873419">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_platformer-pack-redux\PNG\Ground\Grass\grassMid.png" />
+        </object-type>
+        <object-type name="TileGroundGrassMainLeft" sid="906016960177884">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_platformer-pack-redux\PNG\Ground\Grass\grassLeft.png" />
+        </object-type>
+        <object-type name="TileGroundGrassMainRight" sid="218685348741451">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_platformer-pack-redux\PNG\Ground\Grass\grassRight.png" />
+        </object-type>
+        <object-type name="PlayerSprite" sid="857748827803732">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="306949318284495">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="160343541102852">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="210847405901429" speed="5">
+                    <frame duration="1" hotspotX="0.503759" hotspotY="0.5" original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_platformer-pack-redux\PNG\Players\Variable sizes\Beige\alienBiege_front.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="992953597333812" speed="5">
+                    <frame duration="1" hotspotX="0.50365" hotspotY="0.502591" original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_platformer-pack-redux\PNG\Players\Variable sizes\Beige\alienBiege_jump.png" />
+                </animation>
+                <animation framecount="2" loop="0" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="430748893910841" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_platformer-pack-redux\PNG\Players\Variable sizes\Beige\alienBiege_walk1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502564" original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_platformer-pack-redux\PNG\Players\Variable sizes\Beige\alienBiege_walk2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CollisionGround" sid="971031082293845">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="782622849517575">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="976169317673120" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="653041334662812">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="TextStartBtn" sid="244714282906072">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextLoadBtn" sid="232489365197123">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextExitBtn" sid="692959288104061">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="SpriteFont" sid="365325987635116">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
+        <object-type name="TileTitle" sid="283248638320187">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\title-platform-game.png" />
+        </object-type>
+        <object-type name="Browser" sid="174681714234933">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="Sprite" sid="565523439688338">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="673229514538112" speed="5">
+                    <frame duration="1" hotspotX="0.500901" hotspotY="0.505882" original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\title-platform-game.png">
+                        <collision-poly>
+                            <point x="0.0432432" y="0.282353" />
+                            <point x="0.499099" y="0.152941" />
+                            <point x="0.965766" y="0.223529" />
+                            <point x="0.972973" y="0.823529" />
+                            <point x="0.499099" y="0.847059" />
+                            <point x="0.0252252" y="0.835294" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Start Menu.xml</layout>
+        <layout>Gameplay.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Start Menu Event.xml</event-sheet>
+        <event-sheet>Gameplay Event.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="3" />
+        <global-instance type="Keyboard" uid="12" />
+        <global-instance type="Browser" uid="16" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

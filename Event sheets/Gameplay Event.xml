@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Gameplay Event</name>
+    <events>
+        <event-block sid="747494591023556">
+            <conditions>
+                <condition behavior="Platform" id="9" name="On landed" sid="878461120850460" type="PlayerSprite" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="187293471123923" type="PlayerSprite">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="567524602664912">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="324863933759311" type="PlayerSprite" />
+                <condition behavior="Platform" id="2" name="Is on floor" sid="730714369192544" type="PlayerSprite" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="840196400111447" type="PlayerSprite">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="605347708902961">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="383202143895559" type="PlayerSprite" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="577668309368184" type="PlayerSprite">
+                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="360056668272979">
+            <conditions>
+                <condition behavior="Platform" id="7" name="On stopped" sid="557001587417778" type="PlayerSprite" />
+                <condition behavior="Platform" id="2" name="Is on floor" sid="857425062980458" type="PlayerSprite" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="106502415214691" type="PlayerSprite">
+                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="670227903415134">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="853223313918657" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+                <condition id="7" inverted="1" name="Is mirrored" sid="641040268125697" type="PlayerSprite" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="244952080133209" type="PlayerSprite">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="803415611495703">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="776032498878236" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+                <condition id="7" name="Is mirrored" sid="416964067481824" type="PlayerSprite" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="365167989358188" type="PlayerSprite">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
