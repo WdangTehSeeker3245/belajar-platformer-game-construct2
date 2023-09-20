@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Start Menu</name>
-    <sid>8873350371196689</sid>
-    <event-sheet>Start Menu Event</event-sheet>
+    <name>Gameover</name>
+    <sid>267419587687283</sid>
+    <event-sheet>Gameover Event</event-sheet>
     <size>
         <width>700</width>
         <height>400</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Background" sid="8722530541249526">
+        <layer name="Background" sid="251117844500486">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TileBgStartMenu" uid="4">
+                <instance type="TileBgStartMenu" uid="24">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -52,7 +52,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="UI" sid="697816334128810">
+        <layer name="UI" sid="874414073627328">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -68,7 +68,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="start_button" uid="0">
+                <instance type="GameoverText" uid="27">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -78,8 +78,30 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>342</x>
-                        <y>215</y>
+                        <x>348</x>
+                        <y>140</y>
+                        <z>0</z>
+                        <width>500</width>
+                        <height>98</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="playagain_button" uid="14">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>222</x>
+                        <y>315</y>
                         <z>0</z>
                         <width>190</width>
                         <height>49</height>
@@ -90,7 +112,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="load_button" uid="1">
+                <instance type="startmenu_button" uid="25">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -100,8 +122,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>343</x>
-                        <y>275</y>
+                        <x>483</x>
+                        <y>314</y>
                         <z>0</z>
                         <width>190</width>
                         <height>49</height>
@@ -112,31 +134,9 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="exit_button" uid="2">
+                <instance type="TextPlayAgain" uid="26">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>343</x>
-                        <y>334</y>
-                        <z>0</z>
-                        <width>190</width>
-                        <height>49</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.510204077</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TextStartBtn" uid="13">
-                    <properties>
-                        <text>START</text>
+                        <text>PLAY AGAIN</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-21,400,0</font>
                         <color>255,255,255</color>
@@ -149,10 +149,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>248</x>
-                        <y>201</y>
+                        <x>157</x>
+                        <y>299</y>
                         <z>0</z>
-                        <width>189</width>
+                        <width>135</width>
                         <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -161,9 +161,9 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextExitBtn" uid="15">
+                <instance type="TextStartMenu" uid="28">
                     <properties>
-                        <text>EXIT</text>
+                        <text>BACK TO TITLE</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-21,400,0</font>
                         <color>255,255,255</color>
@@ -176,59 +176,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>249</x>
-                        <y>319</y>
+                        <x>390</x>
+                        <y>298</y>
                         <z>0</z>
                         <width>187</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="GameTitle" uid="17">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>344</x>
-                        <y>90</y>
-                        <z>0</z>
-                        <width>555</width>
-                        <height>85</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500900924</hotspotX>
-                        <hotspotY>0.505882382</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TextLoadBtn" uid="29">
-                    <properties>
-                        <text>LOAD</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-21,400,0</font>
-                        <color>255,255,255</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>253</x>
-                        <y>259</y>
-                        <z>0</z>
-                        <width>179</width>
                         <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>

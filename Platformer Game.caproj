@@ -20,6 +20,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -135,6 +136,9 @@
                 <behavior-type name="ScrollTo" sid="160343541102852">
                     <behavior id="scrollto" />
                 </behavior-type>
+                <behavior-type name="BoundToLayout" sid="392236545455475">
+                    <behavior id="bound" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="210847405901429" speed="5">
@@ -168,9 +172,6 @@
         <object-type name="TextStartBtn" sid="244714282906072">
             <plugin id="Text" />
         </object-type>
-        <object-type name="TextLoadBtn" sid="232489365197123">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="TextExitBtn" sid="692959288104061">
             <plugin id="Text" />
         </object-type>
@@ -185,7 +186,7 @@
         <object-type name="Browser" sid="174681714234933">
             <plugin id="Browser" />
         </object-type>
-        <object-type name="Sprite" sid="565523439688338">
+        <object-type name="GameTitle" sid="565523439688338">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="673229514538112" speed="5">
@@ -202,15 +203,172 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TileGroundGrassPlatform" sid="719840959510041">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_platformer-pack-redux\PNG\Ground\Grass\grassHalf_mid.png" />
+        </object-type>
+        <object-type name="TileGroundGrassPlatformLeft" sid="252338183137530">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_platformer-pack-redux\PNG\Ground\Grass\grassHalf_left.png" />
+        </object-type>
+        <object-type name="TileGroundGrassPlatformRight" sid="178851224933417">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_platformer-pack-redux\PNG\Ground\Grass\grassHalf_right.png" />
+        </object-type>
+        <object-type name="CollisionGround2" sid="790432955694028">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="251186400205206">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="969140064190376" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CollisionGround3" sid="321620515526774">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="420486407529930">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="975654808758151" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DeadCollision" sid="180233329600734">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="554607442548599" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GameoverText" sid="755262674983540">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="420920016222305" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\gameover.png">
+                        <collision-poly>
+                            <point x="0.03" y="0.153061" />
+                            <point x="0.954" y="0.234694" />
+                            <point x="0.976" y="0.5" />
+                            <point x="0.938" y="0.683673" />
+                            <point x="0.038" y="0.806122" />
+                            <point x="0.01" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="289897668173598">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_ui-pack\PNG\blue_button00.png" />
+        </object-type>
+        <object-type name="playagain_button" sid="135051868223878">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="351264732383182" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.510204" original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_ui-pack\PNG\blue_button00.png">
+                        <collision-poly>
+                            <point x="0.00526316" y="0.0204082" />
+                            <point x="0.5" y="0" />
+                            <point x="0.994737" y="0.0204082" />
+                            <point x="0.994737" y="0.979592" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00526316" y="0.979592" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="startmenu_button" sid="856708872204778">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="186664567096871" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.510204" original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_ui-pack\PNG\blue_button00.png">
+                        <collision-poly>
+                            <point x="0.00526316" y="0.0204082" />
+                            <point x="0.5" y="0" />
+                            <point x="0.994737" y="0.0204082" />
+                            <point x="0.994737" y="0.979592" />
+                            <point x="0.5" y="1" />
+                            <point x="0.00526316" y="0.979592" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextPlayAgain" sid="332863809605314">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextStartMenu" sid="959920273439375">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextLoadBtn" sid="348752081735354">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="PausePanel" sid="865737618458759">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="868600045229074" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\kenney_ui-pack\PNG\blue_panel.png">
+                        <collision-poly>
+                            <point x="0.02" y="0.02" />
+                            <point x="0.5" y="0" />
+                            <point x="0.98" y="0.02" />
+                            <point x="1" y="0.5" />
+                            <point x="0.98" y="0.98" />
+                            <point x="0.5" y="1" />
+                            <point x="0.02" y="0.98" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PauseText" sid="401963088801154">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="523120670831707" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Faizal\Documents\IzausLab\GameProject\Universal Asset\Platformer\pause.png">
+                        <collision-poly>
+                            <point x="0.0744986" y="0.203125" />
+                            <point x="0.5" y="0.550781" />
+                            <point x="0.971347" y="0.078125" />
+                            <point x="0.988539" y="0.5" />
+                            <point x="0.919771" y="0.78125" />
+                            <point x="0.5" y="0.878906" />
+                            <point x="0.0501433" y="0.863281" />
+                            <point x="0.0286533" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="PauseMenu" plugin-id="Sprite" sid="170816842624682">
+            <members>
+                <member>PausePanel</member>
+                <member>PauseText</member>
+            </members>
+        </family>
+    </families>
     <layout-folder>
         <layout>Start Menu.xml</layout>
         <layout>Gameplay.xml</layout>
+        <layout>Gameover.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Start Menu Event.xml</event-sheet>
         <event-sheet>Gameplay Event.xml</event-sheet>
+        <event-sheet>Gameover Event.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="3" />

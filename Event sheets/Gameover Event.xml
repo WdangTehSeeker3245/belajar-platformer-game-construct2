@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Gameover Event</name>
+    <events>
+        <event-block sid="303204258038563">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="519438952348467" type="Mouse">
+                    <param id="0" name="Object">playagain_button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="985706273622450" type="playagain_button">
+                    <param id="0" name="Width">190</param>
+                    <param id="1" name="Height">49</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="826135908668636">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="681973791724205" type="Mouse">
+                    <param id="0" name="Object">playagain_button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="109910644605414" type="playagain_button">
+                    <param id="0" name="Width">200</param>
+                    <param id="1" name="Height">59</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="122662513359035">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="967874285855963" type="Mouse">
+                    <param id="0" name="Object">startmenu_button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="125190858677097" type="startmenu_button">
+                    <param id="0" name="Width">190</param>
+                    <param id="1" name="Height">49</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="426311705548185">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="431045403744961" type="Mouse">
+                    <param id="0" name="Object">startmenu_button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="499612651551051" type="startmenu_button">
+                    <param id="0" name="Width">200</param>
+                    <param id="1" name="Height">59</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="604113548372497">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="416345967327040" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">playagain_button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="366874066744668" type="System">
+                    <param id="0" name="Layout">Gameplay</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="715789330955279">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="757054269764961" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">startmenu_button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="348711156645605" type="System">
+                    <param id="0" name="Layout">Start Menu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

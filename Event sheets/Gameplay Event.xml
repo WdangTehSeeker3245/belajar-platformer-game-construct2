@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Gameplay Event</name>
     <events>
+        <variable constant="0" name="IsPaused" sid="149944281221720" static="0" type="number">0</variable>
         <event-block sid="747494591023556">
             <conditions>
                 <condition behavior="Platform" id="9" name="On landed" sid="878461120850460" type="PlayerSprite" />
@@ -55,6 +56,11 @@
                     <param id="0" name="Key">37</param>
                 </condition>
                 <condition id="7" inverted="1" name="Is mirrored" sid="641040268125697" type="PlayerSprite" />
+                <condition id="-14" name="Compare variable" sid="965595317992644" type="System">
+                    <param id="0" name="Variable">IsPaused</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="7" name="Set mirrored" sid="244952080133209" type="PlayerSprite">
@@ -68,12 +74,83 @@
                     <param id="0" name="Key">39</param>
                 </condition>
                 <condition id="7" name="Is mirrored" sid="416964067481824" type="PlayerSprite" />
+                <condition id="-14" name="Compare variable" sid="327258946820124" type="System">
+                    <param id="0" name="Variable">IsPaused</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="7" name="Set mirrored" sid="365167989358188" type="PlayerSprite">
                     <param id="0" name="State">1</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="893685067654567">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="331737128962870" type="PlayerSprite">
+                    <param id="0" name="Object">DeadCollision</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="405898200147820" type="System">
+                    <param id="0" name="Layout">Gameover</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="269922457639959">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="817569385971192" type="Keyboard">
+                    <param id="0" name="Key">27</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="935385453145484">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="821714500425531" type="System">
+                            <param id="0" name="Variable">IsPaused</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="499027827836630" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="139031022785584" type="System">
+                            <param id="0" name="Variable">IsPaused</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="545512868597646" type="PauseMenu">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="629393909416192">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="848975408236862" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="771835254813722" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="608701961199348" type="System">
+                            <param id="0" name="Variable">IsPaused</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="533122383574808" type="PauseMenu">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="459497111777221">
+                    <conditions />
+                    <actions>
+                        <action id="2" name="Stop" sid="475321092478229" type="PlayerSprite" />
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
